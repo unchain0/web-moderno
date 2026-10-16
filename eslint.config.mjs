@@ -10,19 +10,21 @@ const teachingFiles = [
   'exercicios/js/FuncaoDaSorte.js',
   'fundamentos/destructuring_3.js',
   'fundamentos/destructuring_4.js',
+  'fundamentos/usando_var_2.js',
   'fundamentos/experimentos.js',
   'fundamentos/inicio/dados_2.js',
   'fundamentos/inicio/dados_3.js',
   'fundamentos/inicio/dados_4.js',
   'fundamentos/relacionais.js',
   'fundamentos/variaveis.js',
+  'fundamentos/usando_var_2.js',
 ];
 
 export default [
   js.configs.recommended,
   {
     languageOptions: { ecmaVersion: 2022, sourceType: 'module', globals: { console: 'readonly', require: 'readonly', module: 'readonly', exports: 'readonly', global: 'readonly', __dirname: 'readonly', __filename: 'readonly', process: 'readonly', Buffer: 'readonly', setTimeout: 'readonly', clearTimeout: 'readonly', setInterval: 'readonly', clearInterval: 'readonly', document: 'readonly', window: 'readonly', navigator: 'readonly', fetch: 'readonly' } },
-    rules: { strict: ['error', 'global'], 'no-unused-vars': 'error', complexity: ['error', 10], 'no-redeclare': 'off' },
+    rules: { strict: ['error', 'global'], 'no-unused-vars': 'error', complexity: ['error', 10], 'no-redeclare': 'error' },
   },
   ...teachingFiles.map((file) => ({
     files: [file],
